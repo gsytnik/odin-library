@@ -1,0 +1,50 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+
+:root {
+   --darkish-red-filter: invert(10%) sepia(62%) saturate(4185%) hue-rotate(355deg) brightness(109%) contrast(92%);
+   --teal-green-filter: invert(34%) sepia(77%) saturate(2247%) hue-rotate(137deg) brightness(97%) contrast(80%);
+}
+
+.book, .addDiv, #newBookForm {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 300px;
+    padding: 10px;
+    border: 4px solid grey;
+    align-items: center;
+    gap: 10px;
+}
+
+.readStatusDiv {
+    display: flex;
+    flex: 1;
+    gap: 5px;
+    align-items: center;
+    padding: 5px;
+}
+
+h3, h4, p {
+    margin: 0;
+}
+
+p {
+    word-break: break-all;
+}
+
+img.notRead{
+    filter: var(--darkish-red-filter);
+}
+
+img.read{
+    filter: var(--teal-green-filter);
+}

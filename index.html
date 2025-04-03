@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./library.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <dialog id="newBookDialog">
+        <form method="dialog" id="newBookForm">
+            <h3>New Book</h3>
+            <label for="bookTitleInput">Book Title</label>
+            <input type="text" name="bookTitleInput" id="bookTitleInput" maxlength="64" required>
+            
+            <label for="bookAuthorInput">Book Author</label>
+            <input type="text" name="bookAuthorInput" id="bookAuthorInput" maxlength="64" required>
+            
+            <label for="bookDescriptionInput">Book Description</label>
+            <textarea name="bookDescriptionInput" id="bookDescriptionInput" maxlength="500" rows="10"
+            cols="20"></textarea>
+            
+            <button type="submit" id="newBookCancel">Cancel</button>
+            <button type="submit" id="newBookCreate">Add Book To Library</button>
+        </form>
+    </dialog>
+
+    <div class="addDiv">
+        <button class="addToLibrary">Add Book</button>
+    </div>
     <div class="library"></div>
 </body>
 </html>
